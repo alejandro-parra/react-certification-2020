@@ -1,38 +1,27 @@
-import React, { useRef } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-
-import { useAuth } from '../../providers/Auth';
-import './Home.styles.css';
+import React from 'react';
+import mockVideos from '../../data/mock-videos.json';
+import VideoGrid from '../../components/VideoGrid/VideoGrid.component';
+import Header from '../../components/Header/Header.component'
 
 function HomePage() {
-  const history = useHistory();
-  const sectionRef = useRef(null);
-  const { authenticated, logout } = useAuth();
-
-  function deAuthenticate(event) {
-    event.preventDefault();
-    logout();
-    history.push('/');
-  }
+  let videoList = mockVideos.items.filter(({id}) => {
+     return id.kind === 'youtube#video' 
+    }).map(({etag, snippet}) => {
+    return {
+      id: etag,
+      title: snippet.title,
+      creationDate: snippet.publishedAt,
+      creator: snippet.channelTitle,
+      thumbImage: snippet.thumbnails.high.url ?? snippet.thumbnails.medium.url ?? snippet.thumbnails.default.url
+    }
+  });
+  
 
   return (
-    <section className="homepage" ref={sectionRef}>
-      <h1>Hello stranger!</h1>
-      {authenticated ? (
-        <>
-          <h2>Good to have you back</h2>
-          <span>
-            <Link to="/" onClick={deAuthenticate}>
-              ← logout
-            </Link>
-            <span className="separator" />
-            <Link to="/secret">show me something cool →</Link>
-          </span>
-        </>
-      ) : (
-        <Link to="/login">let me in →</Link>
-      )}
-    </section>
+    <>
+      <Header/>
+      <VideoGrid videos={videoList}/>
+    </>
   );
 }
 
