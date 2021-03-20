@@ -10,8 +10,6 @@ import Private from '../Private';
 import Layout from '../Layout';
 
 function App() {
-  
-
   return (
     <BrowserRouter>
       <AuthProvider>

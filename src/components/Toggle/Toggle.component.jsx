@@ -5,20 +5,17 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const Toggle = () => {
     const [checked, setChecked] = useState(false);
-
     const toggleChecked = () => {
-        setChecked((prev) => !prev);
+    setChecked((prev) => !prev);
     };
-
-    return(
-        <FormGroup>
+    return (
+    <FormGroup>
         <FormControlLabel
-          control={<Switch checked={checked} onChange={toggleChecked} />}
-          label={checked ? 'Oscuro' : 'Claro'}
+        control={<Switch checked={checked} onChange={toggleChecked} />}
+        label={checked ? 'Oscuro' : 'Claro'}
         />
-      </FormGroup>
+    </FormGroup>
     );
-}
-
+};
 
 export default Toggle;
