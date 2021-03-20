@@ -1,3 +1,12 @@
+Using create-react-app, what do we need to set up for testing?
+- Nothing, Jest is included, but in this template I had to install it again due to some version issues
+
+What components are worth to test in your development?
+- Everything, from functions to UI with snapshots
+
+Can you apply TDD once you already created components?
+- Yes, instead of first creating the test and coding, you now see each internal functionality and UI and make tests to see if they are working correctly, even in edge cases
+
 --------------------------------|---------|----------|---------|---------|-------------------
 File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------------------|---------|----------|---------|---------|-------------------
