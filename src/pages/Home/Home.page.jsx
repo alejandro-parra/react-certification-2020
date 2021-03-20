@@ -20,7 +20,7 @@ export const createVideoList = (mockData) => {
           snippet.thumbnails.default.url,
       };
     });
-}
+};
 
 function HomePage() {
   const videoList = createVideoList(mockVideos);
