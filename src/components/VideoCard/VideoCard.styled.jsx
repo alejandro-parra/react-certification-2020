@@ -1,8 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
-import { stringlifyDate } from '../../utils/fns';
 
-const Card = styled.div`
+export const Card = styled.div`
   width: 22%;
   display: flex;
   flex-direction: column;
@@ -32,7 +30,7 @@ const Card = styled.div`
   }
 `;
 
-const AspectRatioFrame = styled.div`
+export const AspectRatioFrame = styled.div`
   position: relative;
   &::after {
     display: block;
@@ -42,7 +40,7 @@ const AspectRatioFrame = styled.div`
   }
 `;
 
-const ThumbnailImage = styled.img`
+export const ThumbnailImage = styled.img`
   position: absolute;
   left: 0;
   top: 0;
@@ -53,7 +51,7 @@ const ThumbnailImage = styled.img`
   object-fit: cover;
 `;
 
-const InfoContainer = styled.div`
+export const InfoContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -62,7 +60,7 @@ const InfoContainer = styled.div`
   min-height: 7.5rem;
 `;
 
-const Title = styled.p`
+export const Title = styled.p`
   width: 100%;
   color: black;
   font-weight: 500;
@@ -74,7 +72,7 @@ const Title = styled.p`
   white-space: nowrap;
 `;
 
-const Subtitle = styled.p`
+export const Subtitle = styled.p`
   width: 100%;
   color: rgba(0, 0, 0, 0.6);
   text-align: start;
@@ -84,26 +82,9 @@ const Subtitle = styled.p`
   white-space: nowrap;
 `;
 
-const Creator = styled(Subtitle)`
+export const Creator = styled(Subtitle)`
   margin-bottom: 0.5rem;
   &:hover {
     text-decoration: underline;
   }
 `;
-
-const VideoCard = ({ title, creator, thumbImage, creationDate }) => {
-  return (
-    <Card>
-      <AspectRatioFrame>
-        <ThumbnailImage src={thumbImage} alt={title} />
-      </AspectRatioFrame>
-      <InfoContainer>
-        <Title>{title}</Title>
-        <Creator>{creator}</Creator>
-        <Subtitle>{stringlifyDate(new Date(creationDate))}</Subtitle>
-      </InfoContainer>
-    </Card>
-  );
-};
-
-export default VideoCard;
