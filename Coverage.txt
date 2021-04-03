@@ -1,0 +1,36 @@
+Using create-react-app, what do we need to set up for testing?
+- Nothing, Jest is included, but in this template I had to install it again due to some version issues
+
+What components are worth to test in your development?
+- Everything, from functions to UI with snapshots
+
+Can you apply TDD once you already created components?
+- Yes, instead of first creating the test and coding, you now see each internal functionality and UI and make tests to see if they are working correctly, even in edge cases
+
+--------------------------------|---------|----------|---------|---------|-------------------
+File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------|---------|----------|---------|---------|-------------------
+All files                       |   94.03 |    73.91 |   76.47 |   95.45 |                   
+ components/Header              |     100 |      100 |     100 |     100 |                   
+  Header.component.jsx          |     100 |      100 |     100 |     100 |                   
+ components/ProfileDropdown     |     100 |      100 |     100 |     100 |                   
+  ProfileDropdown.component.jsx |     100 |      100 |     100 |     100 |                   
+ components/Searchbar           |     100 |      100 |     100 |     100 |                   
+  Searchbar.component.jsx       |     100 |      100 |     100 |     100 |                   
+ components/Toggle              |   66.67 |       50 |   33.33 |      80 |                   
+  Toggle.component.jsx          |   66.67 |       50 |   33.33 |      80 | 9                 
+ components/VideoCard           |     100 |      100 |     100 |     100 |                   
+  VideoCard.component.jsx       |     100 |      100 |     100 |     100 |                   
+ components/VideoGrid           |     100 |      100 |     100 |     100 |                   
+  VideoGrid.component.jsx       |     100 |      100 |     100 |     100 |                   
+ pages/Home                     |     100 |    33.33 |     100 |     100 |                   
+  Home.page.jsx                 |     100 |    33.33 |     100 |     100 | 18                
+ utils                          |      92 |    83.33 |   33.33 |      92 |                   
+  assetsTransformer.js          |   66.67 |      100 |       0 |   66.67 | 5                 
+  fns.js                        |   95.45 |    83.33 |      50 |   95.45 | 2                 
+--------------------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 2 passed, 2 total
+Tests:       8 passed, 8 total
+Snapshots:   1 passed, 1 total
+Time:        2.88 s

@@ -1,0 +1,884 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage UI renders correctly 1`] = `
+Array [
+  <div
+    className="sc-crrsfI jKAVNj"
+  >
+    <div
+      className="sc-bqyKva sc-kstrdz bjCsj jRtwaV"
+    >
+      <img
+        alt="Logo"
+        className="sc-dQppl fLOELm"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+    </div>
+    <div
+      className="sc-fubCfw gdpKvD"
+    >
+      <input
+        className="sc-pFZIQ likSXB"
+        placeholder="Busca un video"
+      />
+      <svg
+        aria-hidden={true}
+        className="MuiSvgIcon-root sc-jrAGrp jYiHDM"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
+    </div>
+    <div
+      className="sc-bqyKva sc-hBEYos bjCsj rEInM"
+    >
+      <div
+        className="MuiFormGroup-root"
+      >
+        <label
+          className="MuiFormControlLabel-root"
+        >
+          <span
+            className="MuiSwitch-root"
+          >
+            <span
+              aria-disabled={false}
+              className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-1 MuiSwitch-switchBase MuiSwitch-colorSecondary"
+              onBlur={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              tabIndex={null}
+            >
+              <span
+                className="MuiIconButton-label"
+              >
+                <input
+                  checked={false}
+                  className="PrivateSwitchBase-input-4 MuiSwitch-input"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <span
+                  className="MuiSwitch-thumb"
+                />
+              </span>
+            </span>
+            <span
+              className="MuiSwitch-track"
+            />
+          </span>
+          <span
+            className="MuiTypography-root MuiFormControlLabel-label MuiTypography-body1"
+          >
+            Claro
+          </span>
+        </label>
+      </div>
+      <div
+        className="sc-kEjbxe iSpVSD"
+      >
+        <div
+          className="sc-iqHYGH cKvvsF"
+        />
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-colorPrimary"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-iBPRYJ fiDTJb"
+  >
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Video Tour | Welcome to Wizeline Guadalajara"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/nmXMgqjQzls/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Video Tour | Welcome to Wizeline Guadalajara
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline Guadalajara | Bringing Silicon Valley to Mexico"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/HYyRZiwBWc8/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline Guadalajara | Bringing Silicon Valley to Mexico
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline hace sentir a empleados como en casa"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/Po3VwR_NNGk/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline hace sentir a empleados como en casa
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          El Economista TV
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 2 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="We Are Wizeline"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/7PtYNO6g7eI/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          We Are Wizeline
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline Thrives in Mexico City"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/YuW0CE_8i1I/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline Thrives in Mexico City
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 2 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/CHzlSGRvWPs/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Noticieros Televisa
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 4 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="A Day in the Life of an Engineering Manager at Wizeline"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/cjO2fJy8asM/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          A Day in the Life of an Engineering Manager at Wizeline
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 2 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline Technical Writing Academy | Featuring Eduardo Ocejo"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/zClI9OjgKXM/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline Technical Writing Academy | Featuring Eduardo Ocejo
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 10 meses
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Silicon Valley en México"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/8bz9R61oY5o/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Silicon Valley en México
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Azteca Noticias
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Why Wizeline? featuring Juan Pablo Villa in Mexico City"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/7dJFraOqcoQ/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Why Wizeline? featuring Juan Pablo Villa in Mexico City
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline&#39;s 2020 Year in Review"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/w-Qwc_XJrWc/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline&#39;s 2020 Year in Review
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 2 meses
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Why Wizeline? featuring Hugo Lopez in Mexico City"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/rjir_cHTl5w/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Why Wizeline? featuring Hugo Lopez in Mexico City
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Why Wizeline? (We&#39;re Hiring in Mexico!)"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/DcFK1x3NHGY/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Why Wizeline? (We&#39;re Hiring in Mexico!)
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 4 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Why Wizeline? featuring Oswaldo Herrera in Mexico City"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/3BzYWAqZgFw/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Why Wizeline? featuring Oswaldo Herrera in Mexico City
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Caso de Éxito AWS: Wizeline [Spanish]"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/3KVFmT-Tp2w/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Caso de Éxito AWS: Wizeline [Spanish]
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Amazon Web Services
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 2 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline&#39;s 2019 Year in Review"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/aKuPmY2m1Ro/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline&#39;s 2019 Year in Review
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="[1 of 2] Wizeline CEO shares career lessons from Google"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/24sTHUyWhRM/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          [1 of 2] Wizeline CEO shares career lessons from Google
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 4 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline Data Engineering featuring Tania Reyes"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/IxGc1gSqB3A/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline Data Engineering featuring Tania Reyes
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 mes
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Wizeline Querétaro | Mexico&#39;s New Knowledge Economy (We&#39;re hiring!)"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/NP1gAnbeNno/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Wizeline Querétaro | Mexico&#39;s New Knowledge Economy (We&#39;re hiring!)
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Miriam Godinez | Women in Leadership at Wizeline"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/F6Krwu6lUc8/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Miriam Godinez | Women in Leadership at Wizeline
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 4 meses
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Welcome Back to Wizeline Vietnam | Extended Version"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/RFq7gfvhtCk/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Welcome Back to Wizeline Vietnam | Extended Version
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 10 meses
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="How does Wizeline work?"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/E1Vq_A3WKK8/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          How does Wizeline work?
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 3 años
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="12 Wishes from Wizeline | Happy Holidays 2019"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/ZmkslANDz0Q/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          12 Wishes from Wizeline | Happy Holidays 2019
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 1 año
+        </p>
+      </div>
+    </div>
+    <div
+      className="sc-bdfBwQ eaUnzK"
+    >
+      <div
+        className="sc-gsTCUz cMUpzK"
+      >
+        <img
+          alt="Why Wizeline?"
+          className="sc-dlfnbm dxUSor"
+          src="https://i.ytimg.com/vi/Nss3EmTDD3s/hqdefault.jpg"
+        />
+      </div>
+      <div
+        className="sc-hKgILt eNbnBZ"
+      >
+        <p
+          className="sc-eCssSg gIkzsj"
+        >
+          Why Wizeline?
+        </p>
+        <p
+          className="sc-jSgupP sc-gKsewC iHakCu WujdZ"
+        >
+          Wizeline
+        </p>
+        <p
+          className="sc-jSgupP iHakCu"
+        >
+          Hace 3 años
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;
