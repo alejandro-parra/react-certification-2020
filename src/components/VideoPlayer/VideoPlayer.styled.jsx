@@ -47,6 +47,7 @@ export const VideoTitle = styled.p`
   width: 100%;
   font-size: 1.5rem;
   text-align: start;
+  font-weight: 700;
 `;
 
 export const VideoSubtitle = styled.p`

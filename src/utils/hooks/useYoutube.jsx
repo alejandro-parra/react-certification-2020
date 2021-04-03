@@ -3,7 +3,7 @@ import axios from 'axios';
 import apiKey from '../../data/apiKey';
 import mockVideos from '../../data/mock-videos.json';
 
-const fullURL = (query, searchType) => {
+export const fullURL = (query, searchType) => {
   if (searchType === 'search') {
     return `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=${query}&type=video&key=${apiKey}`;
   }

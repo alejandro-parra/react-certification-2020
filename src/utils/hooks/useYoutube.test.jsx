@@ -1,4 +1,4 @@
-import { createVideoCardModel } from './useYoutube';
+import { createVideoCardModel, fullURL } from './useYoutube';
 import mockVideos from '../../data/mock-videos.json';
 
 describe('create video list', () => {
@@ -10,5 +10,19 @@ describe('create video list', () => {
     // in this example we'll use the etag that transforms to 'id';
     const videos = createVideoCardModel(mockVideos);
     expect(videos[0].id).toBe(mockVideos.items[1].etag);
+  });
+});
+
+describe('full URL function', () => {
+  it('returns correct search URL', () => {
+    const searchOnlyString = '&q=';
+    const result = fullURL('test', 'search');
+    expect(result).toContain(searchOnlyString);
+  });
+
+  it('returns correct relatedVideo URL', () => {
+    const searchOnlyString = '&relatedVideoId=';
+    const result = fullURL('test', 'relatedVideo');
+    expect(result).toContain(searchOnlyString);
   });
 });
