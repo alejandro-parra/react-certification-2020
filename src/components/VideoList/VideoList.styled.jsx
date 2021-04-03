@@ -9,4 +9,14 @@ export const ListContainer = styled.div`
   padding: 1rem;
   max-height: 150vh;
   overflow-y: scroll;
+
+  @media (max-width: 900px) {
+    width: 30%;
+  }
+
+  @media (max-width: 600px) {
+    width: 80%;
+    max-height: none;
+    overflow-y: hidden;
+  }
 `;

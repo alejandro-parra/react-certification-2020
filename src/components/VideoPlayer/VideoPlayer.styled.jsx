@@ -7,6 +7,13 @@ export const PlayerContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  @media (max-width: 900px) {
+    width: 70%;
+  }
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const AspectRatioFrame = styled.div`
