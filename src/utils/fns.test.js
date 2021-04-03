@@ -1,4 +1,4 @@
-import * as fns from './fns.ts';
+import * as fns from './fns';
 
 describe('Stringlify Date', () => {
   it('prints singular units when value is 1', () => {

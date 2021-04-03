@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { Container, ProfileImage } from './ProfileDropdown.styled';
 
-const ProfileDropdown = ({ items, image }) => {
+const ProfileDropdown = ({ image }) => {
   return (
     <>
       <Container>

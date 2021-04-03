@@ -1,10 +1,10 @@
 import React from 'react';
 import { MainContainer, BarInput, SearchPlaceholder } from './Searchbar.styled';
 
-const Searchbar = () => {
+const Searchbar = ({ handleInput }) => {
   return (
     <MainContainer>
-      <BarInput placeholder="Busca un video" />
+      <BarInput placeholder="Busca un video" onChange={handleInput} />
       <SearchPlaceholder />
     </MainContainer>
   );

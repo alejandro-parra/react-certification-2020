@@ -1,4 +1,4 @@
-import { createVideoCardModel } from './useYoutube.tsx';
+import { createVideoCardModel } from './useYoutube';
 import mockVideos from '../../data/mock-videos.json';
 
 describe('create video list', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import HomePage from './Home.page';
 
-import mockVideos from '../../data/mock-videos.json';
+// import mockVideos from '../../data/mock-videos.json';
 
 describe('HomePage UI', () => {
   it('renders correctly', () => {

@@ -7,4 +7,6 @@ export const ListContainer = styled.div`
   align-items: center;
   align-content: center;
   padding: 1rem;
+  max-height: 150vh;
+  overflow-y: scroll;
 `;

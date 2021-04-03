@@ -2,22 +2,23 @@ import React from 'react';
 import VideoCard from '../VideoCard/VideoCard.component';
 import { ListContainer } from './VideoList.styled';
 
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, clickHandler }) => {
   return (
     <ListContainer>
-        <p>Videos Similares:</p>
-        {videos.map(({ id, title, creationDate, creator, thumbImage, clickHandler }) => {
+      {videos.map(({ id, title, creationDate, creator, thumbImage }) => {
         return (
-            <VideoCard
+          <VideoCard
             key={id}
             title={title}
             creationDate={creationDate}
             creator={creator}
             thumbImage={thumbImage}
-            clickHandler={clickHandler.bind(this, id)}
-            />
+            clickHandler={clickHandler}
+            videoId={id}
+            mode="list"
+          />
         );
-        })}
+      })}
     </ListContainer>
   );
 };

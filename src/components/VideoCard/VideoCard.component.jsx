@@ -2,6 +2,7 @@ import React from 'react';
 import { stringlifyDate } from '../../utils/fns';
 import {
   GridCard,
+  ListCard,
   AspectRatioFrame,
   ThumbnailImage,
   InfoContainer,
@@ -10,9 +11,17 @@ import {
   Subtitle,
 } from './VideoCard.styled';
 
-const VideoCard = ({ title, creator, thumbImage, creationDate, clickHandler}) => {
-  return (
-    <GridCard onClick={clickHandler}>
+const VideoCard = ({
+  title,
+  creator,
+  thumbImage,
+  creationDate,
+  clickHandler,
+  videoId,
+  mode,
+}) => {
+  const cardContent = (
+    <>
       <AspectRatioFrame>
         <ThumbnailImage src={thumbImage} alt={title} />
       </AspectRatioFrame>
@@ -21,8 +30,12 @@ const VideoCard = ({ title, creator, thumbImage, creationDate, clickHandler}) =>
         <Creator>{creator}</Creator>
         <Subtitle>{stringlifyDate(new Date(creationDate))}</Subtitle>
       </InfoContainer>
-    </GridCard>
+    </>
   );
+  if (mode === 'grid') {
+    return <GridCard onClick={() => clickHandler(videoId)}>{cardContent}</GridCard>;
+  }
+  return <ListCard onClick={() => clickHandler(videoId)}>{cardContent}</ListCard>;
 };
 
 export default VideoCard;
