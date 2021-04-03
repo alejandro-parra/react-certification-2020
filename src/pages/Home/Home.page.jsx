@@ -23,13 +23,11 @@ function HomePage() {
   );
 
   const handleSearch = (event) => {
-    console.log(event.target.value);
     const searchTerm = event.target.value;
     setSearchString(searchTerm);
   };
 
   const handleCardClick = (videoId) => {
-    console.log(videoId);
     const video = videoList.filter((videoElement) => videoElement.id === videoId)[0];
     setCurrentVideo(video);
     setViewMode('relatedVideos');
@@ -37,10 +35,8 @@ function HomePage() {
   };
 
   useEffect(() => {
-    console.log('search excecuted');
     if (searchString !== '') {
       const timer = setTimeout(() => {
-        console.log('timer fired');
         setViewMode('search');
         loadNewVideos(searchString, 'search');
       }, 800);

@@ -35,11 +35,8 @@ export const useYoutubeListFetcher = (query, searchType) => {
   const [loading, setLoading] = useState(false);
 
   const loadNewVideos = async (newQuery, newType) => {
-    console.log(newQuery);
-    console.log(newType);
     setLoading(true);
     try {
-      // const data = { ...mockVideos };
       const response = await axios.get(fullURL(newQuery, newType));
       const data = { ...response.data };
       setVideoList(createVideoCardModel(data));
