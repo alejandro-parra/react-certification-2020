@@ -9,7 +9,7 @@ export const Navbar = styled.div`
   background-color: #f3f3f3cc;
   backdrop-filter: blur(4px);
   box-shadow: 0px 2px 8px rgba(18, 45, 69, 0.2);
-  z-index: 1;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

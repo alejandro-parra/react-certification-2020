@@ -1,7 +1,7 @@
 import React from 'react';
 import { stringlifyDate } from '../../utils/fns';
 import {
-  Card,
+  GridCard,
   AspectRatioFrame,
   ThumbnailImage,
   InfoContainer,
@@ -10,9 +10,9 @@ import {
   Subtitle,
 } from './VideoCard.styled';
 
-const VideoCard = ({ title, creator, thumbImage, creationDate }) => {
+const VideoCard = ({ title, creator, thumbImage, creationDate, clickHandler}) => {
   return (
-    <Card>
+    <GridCard onClick={clickHandler}>
       <AspectRatioFrame>
         <ThumbnailImage src={thumbImage} alt={title} />
       </AspectRatioFrame>
@@ -21,7 +21,7 @@ const VideoCard = ({ title, creator, thumbImage, creationDate }) => {
         <Creator>{creator}</Creator>
         <Subtitle>{stringlifyDate(new Date(creationDate))}</Subtitle>
       </InfoContainer>
-    </Card>
+    </GridCard>
   );
 };
 

@@ -1,13 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
 import AuthProvider from '../../providers/Auth';
-import HomePage from '../../pages/Home';
-import LoginPage from '../../pages/Login';
-import NotFound from '../../pages/NotFound';
-import SecretPage from '../../pages/Secret';
-import Private from '../Private';
-import Layout from '../Layout';
+// @ts-ignore
+import HomePage from '../../pages/Home.tsx';
+// @ts-ignore
+import LoginPage from '../../pages/Login.tsx';
+// @ts-ignore
+import NotFound from '../../pages/NotFound.tsx';
+// @ts-ignore
+import SecretPage from '../../pages/Secret.tsx';
+// @ts-ignore
+import Private from '../Private.tsx';
+// @ts-ignore
+import Layout from '../Layout.tsx';
 
 function App() {
   return (

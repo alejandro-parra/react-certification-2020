@@ -4,4 +4,5 @@ export default interface VideoCardModel {
   creationDate: string;
   creator: string;
   thumbImage: string;
+  description: string;   
 }

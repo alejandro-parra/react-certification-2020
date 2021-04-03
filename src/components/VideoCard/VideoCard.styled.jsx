@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-  width: 22%;
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.8);
@@ -15,6 +14,10 @@ export const Card = styled.div`
   &:hover {
     cursor: pointer;
   }
+`;
+
+export const GridCard = styled(Card)`
+  width: 22%;
   @media (max-width: 1200px) {
     width: 30%;
     margin-left: 0.5rem;
@@ -28,6 +31,10 @@ export const Card = styled.div`
   @media (max-width: 600px) {
     width: 90%;
   }
+`;
+
+export const ListCard = styled(Card)`
+  width: 100%;
 `;
 
 export const AspectRatioFrame = styled.div`

@@ -6,5 +6,5 @@ export const ListContainer = styled.div`
   flex-direction: column;
   align-items: center;
   align-content: center;
-  margin-top: 7rem;
+  padding: 1rem;
 `;
