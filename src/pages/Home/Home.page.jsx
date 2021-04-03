@@ -34,6 +34,11 @@ function HomePage() {
     loadNewVideos(video.id, 'relatedVideos');
   };
 
+  const navigateHome = () => {
+    setViewMode('search');
+    loadNewVideos('', 'search');
+  };
+
   useEffect(() => {
     if (searchString !== '') {
       const timer = setTimeout(() => {
@@ -47,14 +52,14 @@ function HomePage() {
   if (loading) {
     return (
       <>
-        <Header items={[]} image="" handleInput={handleSearch} />
+        <Header items={[]} image="" handleInput={handleSearch} homeClick={navigateHome} />
         <Loading />
       </>
     );
   }
   return (
     <>
-      <Header items={[]} image="" handleInput={handleSearch} />
+      <Header items={[]} image="" handleInput={handleSearch} homeClick={navigateHome} />
       {viewMode === 'search' ? (
         <VideoGrid videos={videoList} clickHandler={handleCardClick} />
       ) : (

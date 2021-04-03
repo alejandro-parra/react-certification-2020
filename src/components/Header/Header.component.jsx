@@ -5,11 +5,11 @@ import logo from '../../assets/youtube-logo.png';
 import Toggle from '../Toggle/Toggle.component';
 import { Navbar, LeftContainer, RightContainer, Logo } from './Header.styled';
 
-const Header = ({ items, image, handleInput }) => {
+const Header = ({ items, image, handleInput, homeClick }) => {
   return (
     <Navbar>
       <LeftContainer>
-        <Logo src={logo} alt="Logo" />
+        <Logo src={logo} alt="Logo" onClick={homeClick} />
       </LeftContainer>
       <Searchbar handleInput={handleInput} />
       <RightContainer>

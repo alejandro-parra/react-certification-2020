@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PlayerContainer = styled.div`
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,9 +31,19 @@ export const Player = styled.iframe`
   border-top-left-radius: 10px;
 `;
 
+export const VideoDetailsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: white;
+  padding: 1rem;
+`;
+
 export const VideoTitle = styled.p`
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   width: 100%;
   font-size: 1.5rem;
   text-align: start;

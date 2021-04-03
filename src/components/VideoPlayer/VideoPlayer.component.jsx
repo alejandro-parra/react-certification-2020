@@ -7,6 +7,7 @@ import {
   DescriptionSection,
   AspectRatioFrame,
   AspectRatioInnerWrapper,
+  VideoDetailsContainer,
 } from './VideoPlayer.styled';
 
 const VideoPlayer = ({ videoId, title, subtitle, description }) => {
@@ -25,9 +26,11 @@ const VideoPlayer = ({ videoId, title, subtitle, description }) => {
           />
         </AspectRatioInnerWrapper>
       </AspectRatioFrame>
-      <VideoTitle>{title}</VideoTitle>
-      <VideoSubtitle>{subtitle}</VideoSubtitle>
-      <DescriptionSection>{description}</DescriptionSection>
+      <VideoDetailsContainer>
+        <VideoTitle>{title}</VideoTitle>
+        <VideoSubtitle>{subtitle}</VideoSubtitle>
+        <DescriptionSection>{description}</DescriptionSection>
+      </VideoDetailsContainer>
     </PlayerContainer>
   );
 };

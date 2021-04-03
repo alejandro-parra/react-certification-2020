@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ListContainer = styled.div`
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;

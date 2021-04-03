@@ -15,6 +15,7 @@ export const createVideoCardModel = (responseData) => {
     .filter(({ id }) => {
       return id.kind === 'youtube#video';
     })
+    .filter((video) => video.snippet)
     .map(({ id, snippet }) => {
       return {
         id: id.videoId,
