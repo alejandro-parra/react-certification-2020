@@ -33,9 +33,17 @@ const VideoCard = ({
     </>
   );
   if (mode === 'grid') {
-    return <GridCard onClick={() => clickHandler(videoId)}>{cardContent}</GridCard>;
+    return (
+      <GridCard onClick={() => clickHandler(videoId)} role="button">
+        {cardContent}
+      </GridCard>
+    );
   }
-  return <ListCard onClick={() => clickHandler(videoId)}>{cardContent}</ListCard>;
+  return (
+    <ListCard onClick={() => clickHandler(videoId)} role="button">
+      {cardContent}
+    </ListCard>
+  );
 };
 
 export default VideoCard;
