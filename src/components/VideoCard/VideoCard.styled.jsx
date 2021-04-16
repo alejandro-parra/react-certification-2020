@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0px 8px 32px rgba(18, 45, 69, 0.2);
+  background: ${(props) => props.theme.videoCard.background};
+  border: 1px solid ${(props) => props.theme.videoCard.borderColor};
+  box-shadow: 0px 8px 32px ${(props) => props.theme.videoCard.boxShadow};
   backdrop-filter: blur(2px);
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -69,7 +69,7 @@ export const InfoContainer = styled.div`
 
 export const Title = styled.p`
   width: 100%;
-  color: black;
+  color: ${(props) => props.theme.videoCard.title};
   font-weight: 500;
   font-size: 1.5rem;
   text-align: start;
@@ -81,7 +81,7 @@ export const Title = styled.p`
 
 export const Subtitle = styled.p`
   width: 100%;
-  color: rgba(0, 0, 0, 0.6);
+  color: ${(props) => props.theme.videoCard.subtitle};
   text-align: start;
   max-lines: 1;
   text-overflow: ellipsis;
