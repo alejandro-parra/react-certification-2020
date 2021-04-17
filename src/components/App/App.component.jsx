@@ -1,6 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useGlobalState } from '../../state/GlobalStateProvider';
 import AuthProvider from '../../providers/Auth';
 import HomePage from '../../pages/Home';
 import LoginPage from '../../pages/Login';
@@ -12,8 +13,11 @@ import AppContainer from './App.styled';
 import theme from '../../utils/theme';
 
 function App() {
+  const { state } = useGlobalState();
   return (
-    <ThemeProvider theme={{ ...theme.light }}>
+    <ThemeProvider
+      theme={state.theme === 'light' ? { ...theme.light } : { ...theme.dark }}
+    >
       <AppContainer>
         <BrowserRouter>
           <AuthProvider>
