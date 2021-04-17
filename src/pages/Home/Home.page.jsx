@@ -1,33 +1,79 @@
-import React from 'react';
-import mockVideos from '../../data/mock-videos.json';
+import React, { useState, useEffect } from 'react';
 import VideoGrid from '../../components/VideoGrid/VideoGrid.component';
 import Header from '../../components/Header/Header.component';
-
-export const createVideoList = (mockData) => {
-  return mockData.items
-    .filter(({ id }) => {
-      return id.kind === 'youtube#video';
-    })
-    .map(({ etag, snippet }) => {
-      return {
-        id: etag,
-        title: snippet.title,
-        creationDate: snippet.publishedAt,
-        creator: snippet.channelTitle,
-        thumbImage:
-          snippet.thumbnails.high.url ??
-          snippet.thumbnails.medium.url ??
-          snippet.thumbnails.default.url,
-      };
-    });
-};
+import { useYoutubeListFetcher } from '../../utils/hooks/useYoutube';
+import WatchVideoView from '../../components/WatchVideoView/WatchVideoView.component';
+import Loading from '../../components/Loading/Loading.component';
+import { stringlifyDate } from '../../utils/fns';
 
 function HomePage() {
-  const videoList = createVideoList(mockVideos);
+  const [viewMode, setViewMode] = useState('search');
+  const [searchString, setSearchString] = useState('');
+  const [currentVideo, setCurrentVideo] = useState({
+    id: '',
+    title: '',
+    creationDate: '',
+    creator: '',
+    thumbImage: '',
+    description: '',
+  });
+  const { videoList, loadNewVideos, loading } = useYoutubeListFetcher(
+    searchString,
+    viewMode
+  );
+
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value;
+    setSearchString(searchTerm);
+  };
+
+  const handleCardClick = (videoId) => {
+    const video = videoList.filter((videoElement) => videoElement.id === videoId)[0];
+    setCurrentVideo(video);
+    setViewMode('relatedVideos');
+    loadNewVideos(video.id, 'relatedVideos');
+  };
+
+  const navigateHome = () => {
+    setViewMode('search');
+    loadNewVideos('', 'search');
+  };
+
+  useEffect(() => {
+    if (searchString !== '') {
+      const timer = setTimeout(() => {
+        setViewMode('search');
+        loadNewVideos(searchString, 'search');
+      }, 800);
+      return () => clearInterval(timer);
+    }
+  }, [searchString]);
+
+  if (loading) {
+    return (
+      <>
+        <Header items={[]} image="" handleInput={handleSearch} homeClick={navigateHome} />
+        <Loading />
+      </>
+    );
+  }
   return (
     <>
-      <Header />
-      <VideoGrid videos={videoList} />
+      <Header items={[]} image="" handleInput={handleSearch} homeClick={navigateHome} />
+      {viewMode === 'search' ? (
+        <VideoGrid videos={videoList} clickHandler={handleCardClick} />
+      ) : (
+        <WatchVideoView
+          videoId={currentVideo.id}
+          title={currentVideo.title}
+          subtitle={`${currentVideo.creator} - ${stringlifyDate(
+            new Date(currentVideo.creationDate)
+          )}`}
+          description={currentVideo.description}
+          videoList={videoList}
+          clickHandler={handleCardClick}
+        />
+      )}
     </>
   );
 }

@@ -11,6 +11,7 @@ const Toggle = () => {
   return (
     <FormGroup>
       <FormControlLabel
+        role="switch"
         control={<Switch checked={checked} onChange={toggleChecked} />}
         label={checked ? 'Oscuro' : 'Claro'}
       />

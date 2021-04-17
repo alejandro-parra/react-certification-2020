@@ -1,10 +1,10 @@
 import React from 'react';
 import VideoCard from '../VideoCard/VideoCard.component';
-import { GridContainer } from './VideoGrid.styled';
+import { ListContainer } from './VideoList.styled';
 
-const VideoGrid = ({ videos, clickHandler }) => {
+const VideoList = ({ videos, clickHandler }) => {
   return (
-    <GridContainer>
+    <ListContainer>
       {videos.map(({ id, title, creationDate, creator, thumbImage }) => {
         return (
           <VideoCard
@@ -15,12 +15,12 @@ const VideoGrid = ({ videos, clickHandler }) => {
             thumbImage={thumbImage}
             clickHandler={clickHandler}
             videoId={id}
-            mode="grid"
+            mode="list"
           />
         );
       })}
-    </GridContainer>
+    </ListContainer>
   );
 };
 
-export default VideoGrid;
+export default VideoList;

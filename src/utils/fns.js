@@ -30,5 +30,4 @@ function stringlifyDate(date) {
   }
   return `Hace ${unit} ${metric}`;
 }
-
 export { random, stringlifyDate };
