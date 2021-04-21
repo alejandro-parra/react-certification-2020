@@ -6,7 +6,7 @@ import logo from '../../assets/youtube-logo.png';
 import Toggle from '../Toggle/Toggle.component';
 import { Navbar, LeftContainer, RightContainer, Logo } from './Header.styled';
 
-const Header = ({ items, image, handleInput, homeClick }) => {
+const Header = ({ handleInput, homeClick }) => {
   const { state, dispatch } = useGlobalState();
   return (
     <Navbar>
@@ -19,7 +19,7 @@ const Header = ({ items, image, handleInput, homeClick }) => {
           changeHandler={() => dispatch({ type: 'TOGGLE_THEME' })}
           isChecked={state.theme === 'dark'}
         />
-        <ProfileDropdown items={items} image={image} />
+        <ProfileDropdown />
       </RightContainer>
     </Navbar>
   );

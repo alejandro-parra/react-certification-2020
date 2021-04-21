@@ -1,18 +1,18 @@
 import React from 'react';
 // import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import HomePage from './Home.page';
+import MainPage from './Watch.page';
 
 // import mockVideos from '../../data/mock-videos.json';
 
-describe('HomePage UI', () => {
+describe('MainPage UI', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<HomePage />).toJSON();
+    const tree = renderer.create(<MainPage />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   // it('changes screen when clicking on a snippet', async () => {
-  //   render(<HomePage />);
+  //   render(<MainPage />);
   //   await waitFor(() => {
   //     screen.getByRole('button');
   //   });

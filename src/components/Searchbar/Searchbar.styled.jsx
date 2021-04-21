@@ -19,7 +19,7 @@ export const BarInput = styled.input`
   background: none;
   border: none;
   font-size: 1.2rem;
-
+  color: ${(props) => props.theme.searchBar.inputPlaceholder};
   &::placeholder {
     opacity: 0.6;
   }

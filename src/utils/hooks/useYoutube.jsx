@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import apiKey from '../../data/apiKey';
 import mockVideos from '../../data/mock-videos.json';
+
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export const fullURL = (query, searchType) => {
   if (searchType === 'search') {
@@ -51,7 +52,9 @@ export const useYoutubeListFetcher = (query, searchType) => {
   };
 
   useEffect(() => {
+    console.log('use youtube fetched');
     loadNewVideos(query, searchType);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { videoList, loadNewVideos, loading };

@@ -17,10 +17,10 @@ const Theme = {
       },
     },
     searchBar: {
-      background: 'white',
+      background: 'black',
       borderColor: 'rgba(255, 255, 255, 0.25)',
       boxShadow: 'rgba(18, 45, 69, 0.1)',
-      inputPlaceholder: 'rgba(0, 0, 0, 0.6)',
+      inputPlaceholder: 'rgba(255, 255, 255, 0.6)',
     },
     videoCard: {
       background: '#3c3c3ccc',

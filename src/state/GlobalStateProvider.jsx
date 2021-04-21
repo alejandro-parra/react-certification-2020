@@ -2,13 +2,13 @@ import React, { createContext, useContext, useReducer } from 'react';
 import reducer from './GlobalStateReducer';
 
 const initialState = {
-  searchTerm: '',
   theme: 'light',
+  userInfo: null,
 };
 
 const GlobalContext = createContext({
-  searchTerm: '',
   theme: '',
+  userInfo: null,
 });
 
 function useGlobalState() {
