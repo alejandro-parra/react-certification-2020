@@ -20,7 +20,6 @@ const ProfileDropdown = () => {
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
-  console.log(state);
   const handleClose = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;

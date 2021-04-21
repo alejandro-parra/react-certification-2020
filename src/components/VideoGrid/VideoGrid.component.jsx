@@ -5,17 +5,13 @@ import { GridContainer } from './VideoGrid.styled';
 const VideoGrid = ({ videos, clickHandler }) => {
   return (
     <GridContainer>
-      {videos.map(({ id, title, creationDate, creator, thumbImage }) => {
+      {videos.map((video) => {
         return (
           <VideoCard
-            key={id}
-            title={title}
-            creationDate={creationDate}
-            creator={creator}
-            thumbImage={thumbImage}
-            clickHandler={clickHandler}
-            videoId={id}
+            key={video.id}
+            video={video}
             mode="grid"
+            clickHandler={clickHandler}
           />
         );
       })}

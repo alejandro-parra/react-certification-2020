@@ -9,6 +9,7 @@ const MainPage = () => {
   const history = useHistory();
   const location = useLocation();
   const isFirstRender = useRef(false);
+  const isMounting = useRef(true);
   const [searchString, setSearch] = useState(
     location.state ? location.state.searchString : ''
   );
@@ -57,12 +58,14 @@ const MainPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchString]);
 
-  // useEffect(() => {
-  //   if (history.action === 'POP') {
-  //     loadNewVideos(location.state.searchString, 'search');
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [location.state]);
+  useEffect(() => {
+    if (history.action === 'POP' && !isMounting) {
+      loadNewVideos(location.state.searchString, 'search');
+    } else {
+      isMounting.current = false;
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state]);
 
   if (loading) {
     return (

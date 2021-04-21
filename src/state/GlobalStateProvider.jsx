@@ -1,9 +1,19 @@
 import React, { createContext, useContext, useReducer } from 'react';
+import { AUTH_USERINFO_KEY, AUTH_FAVORITES_KEY } from '../utils/constants';
+import { storage } from '../utils/storage';
 import reducer from './GlobalStateReducer';
 
 const initialState = {
   theme: 'light',
-  userInfo: null,
+  userInfo: storage.get(AUTH_USERINFO_KEY)
+    ? {
+        ...storage.get(AUTH_USERINFO_KEY),
+        favorites:
+          storage.get(
+            `${AUTH_FAVORITES_KEY}${storage.get(AUTH_USERINFO_KEY).googleId}`
+          ) || [],
+      }
+    : null,
 };
 
 const GlobalContext = createContext({

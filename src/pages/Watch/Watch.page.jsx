@@ -13,7 +13,7 @@ const WatchPage = () => {
   const [searchString, setSearch] = useState(
     location.state ? location.state.searchString : ''
   );
-  if (!location.state.currentVideo) {
+  if (!location.state) {
     navigateHome();
   }
   const { videoList, loadNewVideos, loading } = useYoutubeListFetcher(
@@ -63,12 +63,12 @@ const WatchPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchString]);
 
-  // useEffect(() => {
-  //   if (history.action === 'POP') {
-  //     loadNewVideos(location.state.currentVideo.id, 'relatedVideos');
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [location.state]);
+  useEffect(() => {
+    if (history.action === 'POP') {
+      loadNewVideos(location.state.currentVideo.id, 'relatedVideos');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.state]);
 
   if (loading) {
     return (

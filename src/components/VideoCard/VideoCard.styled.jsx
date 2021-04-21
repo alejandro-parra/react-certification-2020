@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 export const Card = styled.div`
   display: flex;
@@ -11,8 +12,17 @@ export const Card = styled.div`
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  button {
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &:hover {
     cursor: pointer;
+    button {
+      display: inline-block;
+    }
   }
 `;
 
@@ -65,6 +75,7 @@ export const InfoContainer = styled.div`
   align-items: flex-start;
   padding: 1rem;
   min-height: 7.5rem;
+  position: relative;
 `;
 
 export const Title = styled.p`
@@ -94,4 +105,17 @@ export const Creator = styled(Subtitle)`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const LikeButton = styled.button`
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  color: ${(props) => props.theme.general.color};
+  background: none;
+  border: none;
+`;
+
+export const RedLikeIcon = styled(FavoriteIcon)`
+  color: red;
 `;

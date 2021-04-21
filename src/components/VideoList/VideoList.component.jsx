@@ -5,17 +5,13 @@ import { ListContainer } from './VideoList.styled';
 const VideoList = ({ videos, clickHandler }) => {
   return (
     <ListContainer>
-      {videos.map(({ id, title, creationDate, creator, thumbImage }) => {
+      {videos.map((video) => {
         return (
           <VideoCard
-            key={id}
-            title={title}
-            creationDate={creationDate}
-            creator={creator}
-            thumbImage={thumbImage}
-            clickHandler={clickHandler}
-            videoId={id}
+            key={video.id}
+            video={video}
             mode="list"
+            clickHandler={clickHandler}
           />
         );
       })}
