@@ -6,7 +6,7 @@ export const Navbar = styled.div`
   left: 0;
   right: 0;
   height: 5rem;
-  background-color: #f3f3f3cc;
+  background-color: ${(props) => props.theme.header.background};
   backdrop-filter: blur(4px);
   box-shadow: 0px 2px 8px rgba(18, 45, 69, 0.2);
   z-index: 2;

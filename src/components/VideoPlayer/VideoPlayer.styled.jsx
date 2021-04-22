@@ -44,7 +44,7 @@ export const VideoDetailsContainer = styled.div`
   width: 100%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: white;
+  background-color: ${(props) => props.theme.videoPlayer.background};
   padding: 1rem;
 `;
 
@@ -63,11 +63,11 @@ export const VideoSubtitle = styled.p`
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #00000099;
+  color: ${(props) => props.theme.videoPlayer.subtitle};
 `;
 
 export const DescriptionSection = styled.p`
-  border-top: solid 1px black;
+  border-top: solid 1px ${(props) => props.theme.videoPlayer.descriptionBorder};
   padding-top: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;

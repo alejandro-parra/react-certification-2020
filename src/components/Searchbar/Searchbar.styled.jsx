@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 
 export const MainContainer = styled.div`
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0px 2px 8px rgba(18, 45, 69, 0.1);
+  background: ${(props) => props.theme.searchBar.background};
+  border: 1px solid ${(props) => props.theme.searchBar.borderColor};
+  box-shadow: 0px 2px 8px ${(props) => props.theme.searchBar.boxShadow};
   backdrop-filter: blur(2px);
   padding: 0.6rem;
   border-radius: 10px;
@@ -30,6 +30,6 @@ export const BarInput = styled.input`
 `;
 
 export const SearchPlaceholder = styled(SearchIcon)`
-  color: rgba(0, 0, 0, 0.6);
+  color: ${(props) => props.theme.searchBar.inputPlaceholder};
   font-size: 1.2rem;
 `;

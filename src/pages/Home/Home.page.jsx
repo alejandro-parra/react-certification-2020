@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useGlobalState } from '../../state/GlobalStateProvider';
 import VideoGrid from '../../components/VideoGrid/VideoGrid.component';
 import Header from '../../components/Header/Header.component';
 import { useYoutubeListFetcher } from '../../utils/hooks/useYoutube';
@@ -8,7 +9,7 @@ import { stringlifyDate } from '../../utils/fns';
 
 function HomePage() {
   const [viewMode, setViewMode] = useState('search');
-  const [searchString, setSearchString] = useState('');
+  const { state, dispatch } = useGlobalState();
   const [currentVideo, setCurrentVideo] = useState({
     id: '',
     title: '',
@@ -18,13 +19,13 @@ function HomePage() {
     description: '',
   });
   const { videoList, loadNewVideos, loading } = useYoutubeListFetcher(
-    searchString,
+    state.searchTerm,
     viewMode
   );
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value;
-    setSearchString(searchTerm);
+    dispatch({ type: 'CHANGE_SEARCH', payload: searchTerm });
   };
 
   const handleCardClick = (videoId) => {
@@ -40,14 +41,14 @@ function HomePage() {
   };
 
   useEffect(() => {
-    if (searchString !== '') {
+    if (state.searchTerm !== '') {
       const timer = setTimeout(() => {
         setViewMode('search');
-        loadNewVideos(searchString, 'search');
+        loadNewVideos(state.searchTerm, 'search');
       }, 800);
       return () => clearInterval(timer);
     }
-  }, [searchString]);
+  }, [state.searchTerm]);
 
   if (loading) {
     return (
