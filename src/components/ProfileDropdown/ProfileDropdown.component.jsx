@@ -7,6 +7,7 @@ import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import GoogleLogin from 'react-google-login';
+import { useHistory } from 'react-router';
 import { Container, ProfileImage } from './ProfileDropdown.styled';
 import { useAuth } from '../../providers/Auth';
 import { useGlobalState } from '../../state/GlobalStateProvider';
@@ -16,6 +17,7 @@ const ProfileDropdown = () => {
   const anchorRef = useRef(null);
   const { state } = useGlobalState();
   const { login, logout, authenticated } = useAuth();
+  const history = useHistory();
   const clientId = process.env.REACT_APP_CLIENT_ID;
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -40,6 +42,26 @@ const ProfileDropdown = () => {
 
   const handleSuccess = (response) => {
     login(response.profileObj);
+  };
+
+  const navigateFavorites = () => {
+    history.push({
+      pathname: '/favorites',
+      state: {
+        searchString: '',
+        mode: 'favorites',
+      },
+    });
+  };
+
+  const navigateVideos = () => {
+    history.push({
+      pathname: '/',
+      state: {
+        searchString: '',
+        mode: 'search',
+      },
+    });
   };
 
   return (
@@ -81,8 +103,12 @@ const ProfileDropdown = () => {
                           />,
                         ]
                       : [
-                          <MenuItem key="videosButton">Videos</MenuItem>,
-                          <MenuItem key="favoritesButton">Favoritos</MenuItem>,
+                          <MenuItem key="videosButton" onClick={navigateVideos}>
+                            Videos
+                          </MenuItem>,
+                          <MenuItem key="favoritesButton" onClick={navigateFavorites}>
+                            Favoritos
+                          </MenuItem>,
                           <MenuItem key="logoutButton" onClick={logout}>
                             Cerrar Sesión
                           </MenuItem>,
@@ -100,15 +126,3 @@ const ProfileDropdown = () => {
 };
 
 export default ProfileDropdown;
-// {state.menuItems.map((menuItem) => {
-//   return (
-//     <MenuItem
-//       onClick={() => {
-//         menuItem.handler();
-//         handleClose();
-//       }}
-//     >
-//       {menuItem.description}
-//     </MenuItem>
-//   );
-// })}

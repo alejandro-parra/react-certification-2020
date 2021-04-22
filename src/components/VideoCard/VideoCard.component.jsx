@@ -19,6 +19,7 @@ import { useGlobalState } from '../../state/GlobalStateProvider';
 const VideoCard = ({ video, clickHandler, mode }) => {
   const { dispatch } = useGlobalState();
   const { authenticated } = useAuth();
+
   const handleLikeClick = (event) => {
     event.stopPropagation();
     if (!video.favorited) {
@@ -33,6 +34,7 @@ const VideoCard = ({ video, clickHandler, mode }) => {
       });
     }
   };
+
   const cardContent = (
     <>
       <AspectRatioFrame>
@@ -52,13 +54,13 @@ const VideoCard = ({ video, clickHandler, mode }) => {
   );
   if (mode === 'grid') {
     return (
-      <GridCard onClick={() => clickHandler(video.id)} role="button">
+      <GridCard onClick={() => clickHandler(video)} role="button">
         {cardContent}
       </GridCard>
     );
   }
   return (
-    <ListCard onClick={() => clickHandler(video.id)} role="button">
+    <ListCard onClick={() => clickHandler(video)} role="button">
       {cardContent}
     </ListCard>
   );

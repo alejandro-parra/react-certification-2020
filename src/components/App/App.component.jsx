@@ -4,14 +4,14 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { useGlobalState } from '../../state/GlobalStateProvider';
 import AuthProvider from '../../providers/Auth';
 import MainPage from '../../pages/Main';
-import LoginPage from '../../pages/Login';
 import NotFound from '../../pages/NotFound';
-import SecretPage from '../../pages/Secret';
 import Private from '../Private';
 import Layout from '../Layout';
 import AppContainer from './App.styled';
 import theme from '../../utils/theme';
 import WatchPage from '../../pages/Watch';
+import FavoritesPage from '../../pages/Favorites/Favorites.page';
+import WatchFavoritesPage from '../../pages/WatchFavorites/WatchFavorites.page';
 
 function App() {
   const { state } = useGlobalState();
@@ -27,11 +27,11 @@ function App() {
               <Route exact path="/">
                 <MainPage />
               </Route>
-              <Route exact path="/login">
-                <LoginPage />
-              </Route>
-              <Private exact path="/secret">
-                <SecretPage />
+              <Private exact path="/favorites">
+                <FavoritesPage />
+              </Private>
+              <Private exact path="/watch/favorites/:videoId">
+                <WatchFavoritesPage />
               </Private>
               <Route path="*">
                 <NotFound />

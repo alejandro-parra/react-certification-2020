@@ -5,17 +5,17 @@ import Loading from '../../components/Loading/Loading.component';
 import DefaultLayout from '../../components/DefaultLayout/DefaultLayout.component';
 import useSearch from '../../utils/hooks/useSearch';
 
-const MainPage = () => {
+const FavoritesPage = () => {
   const history = useHistory();
   const { searchString, loading, videoList } = useSearch();
 
   const handleCardClick = (video) => {
     history.push({
-      pathname: `/watch/${video.id}`,
+      pathname: `/watch/favorites/${video.id}`,
       state: {
         searchString,
         currentVideo: video,
-        mode: 'relatedVideos',
+        mode: 'favorites',
       },
     });
   };
@@ -28,4 +28,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default FavoritesPage;

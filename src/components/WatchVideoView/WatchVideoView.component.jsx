@@ -3,22 +3,10 @@ import { WatchContainer } from './WatchVideoView.styled';
 import VideoPlayer from '../VideoPlayer/VideoPlayer.component';
 import VideoList from '../VideoList/VideoList.component';
 
-const WatchVideoView = ({
-  videoId,
-  title,
-  subtitle,
-  description,
-  videoList,
-  clickHandler,
-}) => {
+const WatchVideoView = ({ video, videoList, clickHandler }) => {
   return (
     <WatchContainer>
-      <VideoPlayer
-        videoId={videoId}
-        title={title}
-        subtitle={subtitle}
-        description={description}
-      />
+      <VideoPlayer video={video} />
       <VideoList videos={videoList} clickHandler={clickHandler} />
     </WatchContainer>
   );
