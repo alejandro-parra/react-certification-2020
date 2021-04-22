@@ -72,12 +72,14 @@ export const useYoutubeListFetcher = (query, searchType) => {
   };
 
   useEffect(() => {
-    console.log('use youtube init');
+    console.log('will load initial videos');
     loadNewVideos(query, searchType);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
+    console.log('state change effect');
+    console.log(state);
     if (state.userInfo) {
       setVideoList(updateFavorites(videoList, state.userInfo.favorites || []));
     }

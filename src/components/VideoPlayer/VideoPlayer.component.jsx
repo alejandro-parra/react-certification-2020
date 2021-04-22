@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import { useAuth } from '../../providers/Auth';
 import { useGlobalState } from '../../state/GlobalStateProvider';
@@ -16,13 +16,14 @@ import {
 } from './VideoPlayer.styled';
 
 const VideoPlayer = ({ video }) => {
+  const [isFav, setFav] = useState(video.favorited);
   const { authenticated } = useAuth();
   const { dispatch } = useGlobalState();
   const role = 'youtube-video';
 
   const handleLikeClick = (event) => {
     event.stopPropagation();
-    if (!video.favorited) {
+    if (!isFav) {
       dispatch({
         type: 'ADD_FAVORITE',
         payload: video,
@@ -33,6 +34,7 @@ const VideoPlayer = ({ video }) => {
         payload: video.id,
       });
     }
+    setFav(!isFav);
   };
   return (
     <PlayerContainer>
@@ -56,7 +58,7 @@ const VideoPlayer = ({ video }) => {
         <DescriptionSection>{video.description}</DescriptionSection>
         {authenticated ? (
           <LikeButton onClick={handleLikeClick}>
-            {video.favorited ? <RedLikeIcon /> : <FavoriteBorderIcon />}
+            {isFav ? <RedLikeIcon /> : <FavoriteBorderIcon />}
           </LikeButton>
         ) : null}
       </VideoDetailsContainer>

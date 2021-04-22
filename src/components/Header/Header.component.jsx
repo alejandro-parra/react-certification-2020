@@ -12,6 +12,7 @@ const Header = () => {
   const history = useHistory();
 
   const navigateHome = () => {
+    state.setSearch('');
     history.push({
       pathname: '/',
       state: {
@@ -26,7 +27,7 @@ const Header = () => {
       <LeftContainer>
         <Logo src={logo} alt="Logo" onClick={navigateHome} />
       </LeftContainer>
-      <Searchbar />
+      <Searchbar setSearch={state.setSearch} />
       <RightContainer>
         <Toggle
           changeHandler={() => dispatch({ type: 'TOGGLE_THEME' })}

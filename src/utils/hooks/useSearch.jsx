@@ -1,55 +1,54 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { useYoutubeListFetcher } from './useYoutube';
 
 function useSearch() {
   const history = useHistory();
   const location = useLocation();
-  const [isFirstRender, setIsFirstRender] = useState(false);
-  const [isMounting, setIsMounting] = useState(true);
+  const isFirstRender = useRef(true);
+  const isMounting = useRef(true);
   const [searchString, setSearch] = useState(
     location.state ? location.state.searchString : ''
   );
-  const [searchQuery, setQuery] = useState(
-    location.state.mode === 'relatedVideos' || location.state.mode === 'favorites'
-      ? location.state.currentVideo.id
-      : searchString
-  );
-
+  const initMode = location.state ? location.state.mode : 'search';
   const { videoList, loadNewVideos, loading } = useYoutubeListFetcher(
-    searchQuery,
-    location.state.mode
+    initMode === 'relatedVideos' ? location.state.currentVideo : searchString,
+    initMode
   );
 
   useEffect(() => {
-    if (isFirstRender && searchQuery !== '') {
+    console.log('search effect');
+    if (!isFirstRender.current && searchString !== '') {
       const timer = setTimeout(() => {
         history.push({
           pathname: '/',
           state: {
-            searchQuery,
+            searchString,
             mode: 'search',
           },
         });
-        loadNewVideos(searchQuery, 'search');
+        console.log('will load videos from search');
+        loadNewVideos(searchString, 'search');
       }, 800);
       return () => clearInterval(timer);
     }
-    if (isFirstRender) {
-      loadNewVideos(searchString, 'search');
-    }
-    setIsFirstRender(true);
-  }, [searchString, isFirstRender]);
+    isFirstRender.current = false;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchString]);
+
   useEffect(() => {
+    console.log('transition effect');
     if (!location.state) {
       setSearch('');
-    }
-    if (history.action === 'POP' && !isMounting) {
+    } else if (history.action === 'POP' && !isMounting.current) {
+      console.log('will load videos from history');
       loadNewVideos(location.state.searchString, 'search');
     } else {
-      setIsMounting(false);
+      isMounting.current = false;
     }
-  }, [location, history, isMounting]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [history]);
+
   return { videoList, loading, searchString, setSearch };
 }
 export default useSearch;

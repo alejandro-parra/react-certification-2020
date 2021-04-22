@@ -14,11 +14,13 @@ const initialState = {
           ) || [],
       }
     : null,
+  setSearch: () => {},
 };
 
 const GlobalContext = createContext({
   theme: '',
   userInfo: null,
+  setSearch: null,
 });
 
 function useGlobalState() {

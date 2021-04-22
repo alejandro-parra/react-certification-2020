@@ -9,6 +9,12 @@ export default function reducer(state, action) {
         theme: state.theme === 'light' ? 'dark' : 'light',
       };
     }
+    case 'SET_SEARCH_FUNCTION': {
+      return {
+        ...state,
+        setSearch: action.payload,
+      };
+    }
     case 'UPDATE_USER_INFO': {
       if (action.payload) {
         const favorites = storage.get(`${AUTH_FAVORITES_KEY}${action.payload.googleId}`);
