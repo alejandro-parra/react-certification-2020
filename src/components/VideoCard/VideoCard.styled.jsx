@@ -8,6 +8,7 @@ export const Card = styled.div`
   border: 1px solid ${(props) => props.theme.videoCard.borderColor};
   box-shadow: 0px 8px 32px ${(props) => props.theme.videoCard.boxShadow};
   backdrop-filter: blur(2px);
+  flex: none;
   border-radius: 10px;
   margin-bottom: 2rem;
   margin-left: 1rem;
