@@ -10,7 +10,7 @@ const WatchPage = () => {
   const history = useHistory();
   const { dispatch } = useGlobalState();
   const location = useLocation();
-  const { searchString, loading, videoList, setSearch } = useSearch();
+  const { searchString, loading, videoList, setSearch, loadNewVideos } = useSearch();
 
   useEffect(() => {
     dispatch({ type: 'SET_SEARCH_FUNCTION', payload: setSearch });
@@ -26,6 +26,7 @@ const WatchPage = () => {
         mode: 'relatedVideos',
       },
     });
+    loadNewVideos(video.id, 'relatedVideos');
   };
 
   return (

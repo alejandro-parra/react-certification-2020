@@ -12,7 +12,7 @@ function useSearch() {
   );
   const initMode = location.state ? location.state.mode : 'search';
   const { videoList, loadNewVideos, loading } = useYoutubeListFetcher(
-    initMode === 'relatedVideos' ? location.state.currentVideo : searchString,
+    initMode === 'relatedVideos' ? location.state.currentVideo.id : searchString,
     initMode
   );
   useEffect(() => {
@@ -44,6 +44,6 @@ function useSearch() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [history]);
 
-  return { videoList, loading, searchString, setSearch };
+  return { videoList, loading, searchString, setSearch, loadNewVideos };
 }
 export default useSearch;
