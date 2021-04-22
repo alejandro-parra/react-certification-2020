@@ -12,8 +12,8 @@ const MainPage = () => {
   const { searchString, loading, videoList, setSearch } = useSearch();
 
   useEffect(() => {
-    console.log('setting setter in context');
     dispatch({ type: 'SET_SEARCH_FUNCTION', payload: setSearch });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setSearch]);
 
   const handleCardClick = (video) => {

@@ -10,7 +10,7 @@ import Layout from '../Layout';
 import AppContainer from './App.styled';
 import theme from '../../utils/theme';
 import WatchPage from '../../pages/Watch';
-import FavoritesPage from '../../pages/Favorites/Favorites.page';
+import FavoritesPage from '../../pages/Favorites';
 import WatchFavoritesPage from '../../pages/WatchFavorites/WatchFavorites.page';
 
 function App() {

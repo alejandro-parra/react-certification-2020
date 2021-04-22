@@ -17,7 +17,6 @@ function AuthProvider({ children }) {
   const [authenticated, setAuthenticated] = useState(false);
   const { dispatch } = useGlobalState();
   useEffect(() => {
-    console.log('auth effect');
     const lastAuthState = storage.get(AUTH_STORAGE_KEY);
     const isAuthenticated = Boolean(lastAuthState);
 

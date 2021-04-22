@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoCard from '../VideoCard/VideoCard.component';
-import { GridContainer } from './VideoGrid.styled';
+import { EmptyMessage, GridContainer } from './VideoGrid.styled';
 
 const VideoGrid = ({ videos, clickHandler }) => {
   return (
@@ -15,6 +15,9 @@ const VideoGrid = ({ videos, clickHandler }) => {
           />
         );
       })}
+      {videos.length === 0 ? (
+        <EmptyMessage>Actualmente no hay videos favoritos en tu cuenta.</EmptyMessage>
+      ) : null}
     </GridContainer>
   );
 };

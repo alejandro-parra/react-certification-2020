@@ -15,9 +15,7 @@ function useSearch() {
     initMode === 'relatedVideos' ? location.state.currentVideo : searchString,
     initMode
   );
-
   useEffect(() => {
-    console.log('search effect');
     if (!isFirstRender.current && searchString !== '') {
       const timer = setTimeout(() => {
         history.push({
@@ -27,7 +25,6 @@ function useSearch() {
             mode: 'search',
           },
         });
-        console.log('will load videos from search');
         loadNewVideos(searchString, 'search');
       }, 800);
       return () => clearInterval(timer);
@@ -37,11 +34,9 @@ function useSearch() {
   }, [searchString]);
 
   useEffect(() => {
-    console.log('transition effect');
     if (!location.state) {
       setSearch('');
     } else if (history.action === 'POP' && !isMounting.current) {
-      console.log('will load videos from history');
       loadNewVideos(location.state.searchString, 'search');
     } else {
       isMounting.current = false;

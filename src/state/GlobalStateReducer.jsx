@@ -35,7 +35,7 @@ export default function reducer(state, action) {
     }
     case 'ADD_FAVORITE': {
       const favorites = state.userInfo ? state.userInfo.favorites || [] : [];
-      const newFavorites = [...favorites, action.payload];
+      const newFavorites = [...favorites, { ...action.payload, favorited: true }];
       storage.set(`${AUTH_FAVORITES_KEY}${state.userInfo.googleId}`, newFavorites);
       return {
         ...state,

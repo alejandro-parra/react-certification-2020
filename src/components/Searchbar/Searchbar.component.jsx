@@ -4,7 +4,6 @@ import { MainContainer, BarInput, SearchPlaceholder } from './Searchbar.styled';
 const Searchbar = ({ setSearch }) => {
   const handleSearch = (event) => {
     const searchTerm = event.target.value;
-    console.log(searchTerm);
     setSearch(searchTerm);
   };
 

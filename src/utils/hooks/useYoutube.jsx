@@ -50,7 +50,6 @@ export const useYoutubeListFetcher = (query, searchType) => {
   const [loading, setLoading] = useState(false);
 
   const loadNewVideos = async (newQuery, newType) => {
-    console.log('call new videos');
     const favorites = state.userInfo ? state.userInfo.favorites || [] : [];
     setLoading(true);
     if (newType === 'favorites') {
@@ -66,25 +65,23 @@ export const useYoutubeListFetcher = (query, searchType) => {
         const data = { ...mockVideos };
         setVideoList(createVideoCardModel(data, favorites));
         setLoading(false);
-        console.log(`Error while fetching data: ${err}`);
       }
     }
   };
 
   useEffect(() => {
-    console.log('will load initial videos');
     loadNewVideos(query, searchType);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    console.log('state change effect');
-    console.log(state);
     if (state.userInfo) {
       setVideoList(updateFavorites(videoList, state.userInfo.favorites || []));
+      if (searchType === 'favorites') {
+        setVideoList(state.userInfo.favorites);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
-
   return { videoList, loadNewVideos, loading };
 };
