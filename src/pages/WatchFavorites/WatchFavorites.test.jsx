@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import { ThemeProvider } from 'styled-components';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import WatchPage from './Watch.page';
+import WatchFavoritesPage from './WatchFavorites.page';
 import DefaultLayout from '../../components/DefaultLayout/DefaultLayout.component';
 import AuthProvider from '../../providers/Auth';
 import AppContainer from '../../components/App/App.styled';
@@ -30,7 +30,7 @@ describe('WatchPage', () => {
                 <DefaultLayout>
                   <Switch>
                     <Route exact path="/">
-                      <WatchPage />
+                      <WatchFavoritesPage />
                     </Route>
                   </Switch>
                 </DefaultLayout>

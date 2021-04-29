@@ -1,6 +1,5 @@
-import { renderHook } from '@testing-library/react-hooks';
 import apiKey from '../../data/apiKey';
-import { createVideoCardModel, fullURL, useYoutubeListFetcher } from './useYoutube';
+import { createVideoCardModel, fullURL } from './useYoutube';
 import mockVideos from '../../data/mock-videos.json';
 
 describe('create video list', () => {
@@ -26,29 +25,5 @@ describe('full URL function', () => {
     const expected = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&relatedToVideoId=test&type=video&key=${apiKey}`;
     const result = fullURL('test', 'relatedVideo');
     expect(result).toContain(expected);
-  });
-});
-
-describe('useYoutube hook', () => {
-  const { result } = renderHook(() => useYoutubeListFetcher('wizeline', 'search'));
-  it('returns correct values when init', () => {
-    expect(result.current.videoList).toBeTruthy();
-    expect(result.current.loadNewVideos).toBeTruthy();
-    expect(result.current.loading).toBeTruthy();
-  });
-
-  it('returns a list of cards in the correct format', () => {
-    const videoCount = result.current.videoList.length;
-    const filteredArray = result.current.videoList.filter((video) => {
-      return (
-        video.id &&
-        video.title &&
-        video.creationDate &&
-        video.creator &&
-        video.thumbImage &&
-        video.description
-      );
-    });
-    expect(filteredArray.length).toBe(videoCount);
   });
 });

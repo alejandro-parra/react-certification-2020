@@ -18,7 +18,8 @@ const ProfileDropdown = () => {
   const { state } = useGlobalState();
   const { login, logout, authenticated } = useAuth();
   const history = useHistory();
-  const clientId = process.env.REACT_APP_CLIENT_ID;
+  const clientId =
+    '614318787181-rhg320b4e4fnh101631s4kd8tufu7fhe.apps.googleusercontent.com';
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
   };
