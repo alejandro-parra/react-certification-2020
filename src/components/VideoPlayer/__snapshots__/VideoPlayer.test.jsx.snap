@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePage UI renders correctly 1`] = `
-Array [
+exports[`Video Player renders properly with first video 1`] = `
+<div
+  className="sc-kEjbxe idBIsN"
+>
   <div
-    className="sc-kstrdz VHRkH"
+    className="sc-gKsewC cGmJSu"
   >
     <div
-      className="sc-fodVxV sc-fFubgz bPTrMk fhliTH"
+      className="sc-fubCfw sc-pFZIQ lhLrwC ewTVTh"
     >
       <img
         alt="Logo"
-        className="sc-hBEYos kzrmER"
+        className="sc-iBPRYJ igsgSd"
         onClick={[Function]}
         src={
           Object {
@@ -20,16 +22,16 @@ Array [
       />
     </div>
     <div
-      className="sc-jrAGrp idCptY"
+      className="sc-bdfBwQ ciJQlf"
     >
       <input
-        className="sc-kEjbxe keRHpK"
+        className="sc-gsTCUz eqwSJp"
         onChange={[Function]}
         placeholder="Busca un video"
       />
       <svg
         aria-hidden={true}
-        className="MuiSvgIcon-root sc-iqHYGH QaGG"
+        className="MuiSvgIcon-root sc-dlfnbm kmwbTw"
         focusable="false"
         viewBox="0 0 24 24"
       >
@@ -39,7 +41,7 @@ Array [
       </svg>
     </div>
     <div
-      className="sc-fodVxV sc-bkzZxe bPTrMk OsNsC"
+      className="sc-fubCfw sc-jrAGrp lhLrwC fimdiS"
     >
       <div
         className="MuiFormGroup-root"
@@ -93,10 +95,11 @@ Array [
         </label>
       </div>
       <div
-        className="sc-crrsfI klUkej"
+        className="sc-hKgILt ZHOsl"
+        onClick={[Function]}
       >
         <div
-          className="sc-dQppl cmeZYW"
+          className="sc-eCssSg ejxvBc"
         />
         <svg
           aria-hidden={true}
@@ -110,9 +113,46 @@ Array [
         </svg>
       </div>
     </div>
-  </div>,
+  </div>
   <div
-    className="sc-pFZIQ giDqbV"
-  />,
-]
+    className="sc-hHftDr cXmDPz"
+  >
+    <div
+      className="sc-dmlrTW djfHyC"
+    >
+      <div
+        className="sc-kfzAmx ggePzj"
+      >
+        <iframe
+          className="sc-fKFyDc jKvHAl"
+          frameBorder="0"
+          id="ytplayer"
+          role="youtube-video"
+          src="https://www.youtube.com/embed/nmXMgqjQzls?autoplay=0"
+          title="Video Tour | Welcome to Wizeline Guadalajara"
+          type="text/html"
+        />
+      </div>
+    </div>
+    <div
+      className="sc-bBXqnf iHGISI"
+    >
+      <p
+        className="sc-iwyYcG exfgrY"
+      >
+        Video Tour | Welcome to Wizeline Guadalajara
+      </p>
+      <p
+        className="sc-cxFLnm cpBjhe"
+      >
+        Wizeline - Hace 1 año
+      </p>
+      <p
+        className="sc-lmoMRL iwIsOq"
+      >
+        Follow Hector Padilla, Wizeline Director of Engineering, for a lively tour of our office. In 2018, Wizeline opened its stunning new office in Guadalajara, Jalisco, ...
+      </p>
+    </div>
+  </div>
+</div>
 `;

@@ -39,6 +39,7 @@ export const Player = styled.iframe`
 `;
 
 export const VideoDetailsContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -46,6 +47,18 @@ export const VideoDetailsContainer = styled.div`
   border-bottom-left-radius: 10px;
   background-color: ${(props) => props.theme.videoPlayer.background};
   padding: 1rem;
+  button {
+    display: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    button {
+      display: inline-block;
+    }
+  }
 `;
 
 export const VideoTitle = styled.p`

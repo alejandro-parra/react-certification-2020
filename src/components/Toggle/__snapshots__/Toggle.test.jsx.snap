@@ -31,7 +31,6 @@ exports[`Toggle component renders properly 1`] = `
           className="MuiIconButton-label"
         >
           <input
-            checked={false}
             className="PrivateSwitchBase-input-4 MuiSwitch-input"
             onChange={[Function]}
             type="checkbox"

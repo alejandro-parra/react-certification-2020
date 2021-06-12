@@ -1,4 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import { useAuth } from '../../providers/Auth';
+import { useGlobalState } from '../../state/GlobalStateProvider';
+import { stringlifyDate } from '../../utils/fns';
+import { LikeButton, RedLikeIcon } from '../VideoCard/VideoCard.styled';
 import {
   PlayerContainer,
   Player,
@@ -10,8 +15,27 @@ import {
   VideoDetailsContainer,
 } from './VideoPlayer.styled';
 
-const VideoPlayer = ({ videoId, title, subtitle, description }) => {
+const VideoPlayer = ({ video }) => {
+  const [isFav, setFav] = useState(video.favorited);
+  const { authenticated } = useAuth();
+  const { dispatch } = useGlobalState();
   const role = 'youtube-video';
+
+  const handleLikeClick = (event) => {
+    event.stopPropagation();
+    if (!isFav) {
+      dispatch({
+        type: 'ADD_FAVORITE',
+        payload: video,
+      });
+    } else {
+      dispatch({
+        type: 'REMOVE_FAVORITE',
+        payload: video.id,
+      });
+    }
+    setFav(!isFav);
+  };
   return (
     <PlayerContainer>
       <AspectRatioFrame>
@@ -21,15 +45,22 @@ const VideoPlayer = ({ videoId, title, subtitle, description }) => {
             frameBorder="0"
             id="ytplayer"
             type="text/html"
-            title={title}
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=0`}
+            title={video.title}
+            src={`https://www.youtube.com/embed/${video.id}?autoplay=0`}
           />
         </AspectRatioInnerWrapper>
       </AspectRatioFrame>
       <VideoDetailsContainer>
-        <VideoTitle>{title}</VideoTitle>
-        <VideoSubtitle>{subtitle}</VideoSubtitle>
-        <DescriptionSection>{description}</DescriptionSection>
+        <VideoTitle>{video.title}</VideoTitle>
+        <VideoSubtitle>{`${video.creator} - ${stringlifyDate(
+          new Date(video.creationDate)
+        )}`}</VideoSubtitle>
+        <DescriptionSection>{video.description}</DescriptionSection>
+        {authenticated ? (
+          <LikeButton onClick={handleLikeClick}>
+            {isFav ? <RedLikeIcon /> : <FavoriteBorderIcon />}
+          </LikeButton>
+        ) : null}
       </VideoDetailsContainer>
     </PlayerContainer>
   );

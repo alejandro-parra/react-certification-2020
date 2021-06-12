@@ -5,10 +5,8 @@ import App from './components/App/App.component';
 import './global.css';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalStateProvider>
-      <App />
-    </GlobalStateProvider>
-  </React.StrictMode>,
+  <GlobalStateProvider>
+    <App />
+  </GlobalStateProvider>,
   document.getElementById('root')
 );

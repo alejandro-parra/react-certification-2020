@@ -7,52 +7,88 @@ What components are worth to test in your development?
 Can you apply TDD once you already created components?
 - Yes, instead of first creating the test and coding, you now see each internal functionality and UI and make tests to see if they are working correctly, even in edge cases
 
---------------------------------|---------|----------|---------|---------|----------------------------
-File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s          
---------------------------------|---------|----------|---------|---------|----------------------------
-All files                       |   73.43 |    60.61 |      50 |   74.29 |                            
- components/Header              |     100 |      100 |     100 |     100 |                            
-  Header.component.jsx          |     100 |      100 |     100 |     100 |                            
-  Header.styled.jsx             |     100 |      100 |     100 |     100 |                            
- components/Loading             |   66.67 |      100 |       0 |   66.67 |                            
-  Loading.component.jsx         |      50 |      100 |       0 |      50 | 5                          
-  Loading.styled.jsx            |     100 |      100 |     100 |     100 |                            
- components/ProfileDropdown     |     100 |      100 |     100 |     100 |                            
-  ProfileDropdown.component.jsx |     100 |      100 |     100 |     100 |                            
-  ProfileDropdown.styled.jsx    |     100 |      100 |     100 |     100 |                            
- components/Searchbar           |     100 |      100 |     100 |     100 |                            
-  Searchbar.component.jsx       |     100 |      100 |     100 |     100 |                            
-  Searchbar.styled.jsx          |     100 |      100 |     100 |     100 |                            
- components/Toggle              |     100 |      100 |     100 |     100 |                            
-  Toggle.component.jsx          |     100 |      100 |     100 |     100 |                            
- components/VideoCard           |    62.5 |        0 |       0 |    62.5 |                            
-  VideoCard.component.jsx       |   14.29 |        0 |       0 |   14.29 | 24-43                      
-  VideoCard.styled.jsx          |     100 |      100 |     100 |     100 |                            
- components/VideoGrid           |      75 |      100 |      50 |      75 |                            
-  VideoGrid.component.jsx       |   66.67 |      100 |      50 |   66.67 | 9                          
-  VideoGrid.styled.jsx          |     100 |      100 |     100 |     100 |                            
- components/VideoList           |      50 |      100 |       0 |      50 |                            
-  VideoList.component.jsx       |   33.33 |      100 |       0 |   33.33 | 6-9                        
-  VideoList.styled.jsx          |     100 |      100 |     100 |     100 |                            
- components/VideoPlayer         |   81.82 |      100 |       0 |   81.82 |                            
-  VideoPlayer.component.jsx     |   33.33 |      100 |       0 |   33.33 | 14-15                      
-  VideoPlayer.styled.jsx        |     100 |      100 |     100 |     100 |                            
- components/WatchVideoView      |   66.67 |      100 |       0 |   66.67 |                            
-  WatchVideoView.component.jsx  |      50 |      100 |       0 |      50 | 14                         
-  WatchVideoView.styled.jsx     |     100 |      100 |     100 |     100 |                            
- data                           |     100 |      100 |     100 |     100 |                            
-  apiKey.js                     |     100 |      100 |     100 |     100 |                            
- pages/Home                     |   38.46 |    33.33 |    12.5 |   41.67 |                            
-  Home.page.jsx                 |   38.46 |    33.33 |    12.5 |   41.67 | 26-27,31-34,38-39,43-48,53 
- utils                          |      92 |    72.22 |   33.33 |      92 |                            
-  assetsTransformer.js          |   66.67 |      100 |       0 |   66.67 | 7                          
-  fns.js                        |   95.45 |    72.22 |      50 |   95.45 | 2                          
- utils/hooks                    |   73.08 |       60 |     100 |   73.08 |                            
-  useYoutube.jsx                |   73.08 |       60 |     100 |   73.08 | 42-49                      
---------------------------------|---------|----------|---------|---------|----------------------------
+--------------------------------|---------|----------|---------|---------|-----------------------------------
+File                            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                 
+--------------------------------|---------|----------|---------|---------|-----------------------------------
+All files                       |   76.01 |    52.59 |   63.55 |   76.32 |                                   
+ components/App                 |     100 |       50 |     100 |     100 |                                   
+  App.component.jsx             |     100 |       50 |     100 |     100 | 19                                
+  App.styled.jsx                |     100 |      100 |     100 |     100 |                                   
+ components/DefaultLayout       |     100 |      100 |     100 |     100 |                                   
+  DefaultLayout.component.jsx   |     100 |      100 |     100 |     100 |                                   
+ components/Header              |   78.57 |      100 |      50 |   78.57 |                                   
+  Header.component.jsx          |    62.5 |      100 |   33.33 |    62.5 | 15-16,33                          
+  Header.styled.jsx             |     100 |      100 |     100 |     100 |                                   
+ components/Layout              |     100 |      100 |     100 |     100 |                                   
+  Layout.component.jsx          |     100 |      100 |     100 |     100 |                                   
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ components/Loading             |     100 |      100 |     100 |     100 |                                   
+  Loading.component.jsx         |     100 |      100 |     100 |     100 |                                   
+  Loading.styled.jsx            |     100 |      100 |     100 |     100 |                                   
+ components/Private             |     100 |       50 |     100 |     100 |                                   
+  Private.component.jsx         |     100 |       50 |     100 |     100 | 10                                
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ components/ProfileDropdown     |      55 |    21.43 |   23.53 |   56.41 |                                   
+  ProfileDropdown.component.jsx |   54.84 |    21.43 |   18.18 |   56.67 | 24,27-31,38,45,49-50,60-61,83-102 
+  ProfileDropdown.styled.jsx    |   55.56 |      100 |   33.33 |   55.56 | 23-31                             
+ components/Searchbar           |   84.62 |      100 |   85.71 |   84.62 |                                   
+  Searchbar.component.jsx       |      60 |      100 |      50 |      60 | 6-7                               
+  Searchbar.styled.jsx          |     100 |      100 |     100 |     100 |                                   
+ components/Toggle              |     100 |      100 |     100 |     100 |                                   
+  Toggle.component.jsx          |     100 |      100 |     100 |     100 |                                   
+ components/VideoCard           |   77.42 |     37.5 |      60 |   77.42 |                                   
+  VideoCard.component.jsx       |   57.14 |     37.5 |      25 |   57.14 | 24-31,57,63                       
+  VideoCard.styled.jsx          |   94.12 |      100 |   83.33 |   94.12 | 115                               
+ components/VideoGrid           |     100 |      100 |     100 |     100 |                                   
+  VideoGrid.component.jsx       |     100 |      100 |     100 |     100 |                                   
+  VideoGrid.styled.jsx          |     100 |      100 |     100 |     100 |                                   
+ components/VideoList           |     100 |      100 |     100 |     100 |                                   
+  VideoList.component.jsx       |     100 |      100 |     100 |     100 |                                   
+  VideoList.styled.jsx          |     100 |      100 |     100 |     100 |                                   
+ components/VideoPlayer         |   78.26 |    16.67 |      80 |   78.26 |                                   
+  VideoPlayer.component.jsx     |   58.33 |    16.67 |      50 |   58.33 | 25-37                             
+  VideoPlayer.styled.jsx        |     100 |      100 |     100 |     100 |                                   
+ components/WatchVideoView      |     100 |      100 |     100 |     100 |                                   
+  WatchVideoView.component.jsx  |     100 |      100 |     100 |     100 |                                   
+  WatchVideoView.styled.jsx     |     100 |      100 |     100 |     100 |                                   
+ data                           |     100 |      100 |     100 |     100 |                                   
+  apiKey.js                     |     100 |      100 |     100 |     100 |                                   
+ pages/Favorites                |   77.78 |       75 |   33.33 |   77.78 |                                   
+  Favorites.page.jsx            |   77.78 |       75 |   33.33 |   77.78 | 14,19                             
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ pages/Main                     |   88.89 |      100 |   66.67 |   88.89 |                                   
+  Main.page.jsx                 |   88.89 |      100 |   66.67 |   88.89 | 20                                
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ pages/NotFound                 |     100 |      100 |     100 |     100 |                                   
+  NotFound.page.jsx             |     100 |      100 |     100 |     100 |                                   
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ pages/Watch                    |   72.73 |       75 |   33.33 |   72.73 |                                   
+  Watch.page.jsx                |   72.73 |       75 |   33.33 |   72.73 | 16,21-29                          
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ pages/WatchFavorites           |   72.73 |       75 |   33.33 |   72.73 |                                   
+  WatchFavorites.page.jsx       |   72.73 |       75 |   33.33 |   72.73 | 16,21-29                          
+ providers/Auth                 |   59.09 |       50 |      60 |   59.09 |                                   
+  Auth.provider.jsx             |   59.09 |       50 |      60 |   59.09 | 11,27-30,35-38                    
+  index.js                      |       0 |        0 |       0 |       0 |                                   
+ state                          |   88.46 |    53.85 |      80 |      88 |                                   
+  GlobalStateProvider.jsx       |    87.5 |    33.33 |   66.67 |    87.5 | 29                                
+  GlobalStateReducer.jsx        |   88.89 |       60 |     100 |   88.24 | 22,61                             
+ utils                          |   88.89 |    77.78 |      60 |   88.89 |                                   
+  assetsTransformer.js          |   66.67 |      100 |       0 |   66.67 | 7                                 
+  constants.js                  |     100 |      100 |     100 |     100 |                                   
+  fns.js                        |   95.45 |    77.78 |      50 |   95.45 | 2                                 
+  storage.js                    |   71.43 |      100 |     100 |   71.43 | 7-8                               
+  theme.js                      |     100 |      100 |     100 |     100 |                                   
+ utils/hooks                    |   64.06 |       40 |   66.67 |   65.08 |                                   
+  useSearch.jsx                 |   63.64 |     37.5 |      60 |   66.67 | 20-30,39-42                       
+  useYoutube.jsx                |   64.29 |    42.11 |   69.23 |   64.29 | 33,39-42,56-57,61-67,79-81        
+--------------------------------|---------|----------|---------|---------|-----------------------------------
 
-Test Suites: 4 passed, 4 total
-Tests:       14 passed, 14 total
-Snapshots:   2 passed, 2 total
-Time:        3.387 s
+Snapshot Summary
+ › 1 snapshot written from 1 test suite.
+
+Test Suites: 11 passed, 11 total
+Tests:       26 passed, 26 total
+Snapshots:   1 written, 6 passed, 7 total
+Time:        6.007 s
 Ran all test suites.

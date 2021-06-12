@@ -4,6 +4,7 @@ export const ListContainer = styled.div`
   width: 20%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
   padding: 1rem;

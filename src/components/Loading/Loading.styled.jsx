@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Loading = styled.div`
-  background-color: #00000099;
+  background-color: #000000cc;
   p {
     color: white;
   }

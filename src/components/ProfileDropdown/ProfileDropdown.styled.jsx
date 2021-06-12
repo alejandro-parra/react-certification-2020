@@ -14,7 +14,8 @@ export const ProfileImage = styled.div`
   width: 3rem;
   height: 3rem;
   background-color: ${(props) => props.theme.dropdown.imageBackground};
-  background-image: ${(props) => props.image};
+  background-image: url(${(props) => props.image});
+  background-size: cover;
   border-radius: 1.5rem;
 `;
 
